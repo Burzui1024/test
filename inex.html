@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Задача 1</title>
+
+</head>
+<body>
+<button id="but1" onclick="click1()">кнопка1</button>
+<button id="but2" onclick="click2()">кнопка2</button>
+
+<p id="paragraf">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid atque autem beatae eius iure laborum,
+    molestiae
+    natus necessitatibus nihil nostrum numquam odit praesentium, quaerat quas quia rerum saepe sequi sit voluptas
+    voluptatum! Adipisci amet corporis esse explicabo fuga fugiat minima qui reiciendis sit sunt! Ab cum eveniet
+    incidunt laudantium numquam!</p>
+</body>
+
+<script>
+    let flag = false;
+    function click1 () {
+        flag=true
+    }
+    function click2() {
+        if (flag) {
+            if (document.getElementById("paragraf").style.getPropertyValue("display")==="none") {
+                document.getElementById("paragraf").setAttribute("style", "display: block");
+            }else {
+                document.getElementById("paragraf").setAttribute("style", "display: none");
+            }
+            flag=false
+        }
+    }
+</script>
+</html>
